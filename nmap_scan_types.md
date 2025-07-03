@@ -18,3 +18,15 @@ A quick reference for common Nmap scans used in cybersecurity, penetration testi
 
 ```bash
 sudo nmap -sS -sU -p T:22,80,U:53,161 192.168.0.103
+```
+
+Scans:
+TCP ports 22 (SSH), 80 (HTTP)
+UDP ports 53 (DNS), 161 (SNMP)
+
+🛡️ Security+ Relevance
+This aligns with:
+
+4.2: Vulnerability scanning
+4.3: Monitoring concepts
+5.5: Penetration testing
