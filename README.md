@@ -1,73 +1,82 @@
-📡 Nmap Notes for Security+ and Network+
+# 📡 Nmap Notes for Security+ and Network+
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Repo Size](https://img.shields.io/github/repo-size/sheniaks/nmap-notes)
+![Last Commit](https://img.shields.io/github/last-commit/sheniaks/nmap-notes)
 
+> Practical Nmap examples for cybersecurity learners prepping for **CompTIA Security+**, **Network+**, or entering **penetration testing** and **network security**.
 
-Practical Nmap examples for cybersecurity learners prepping for CompTIA Security+, Network+, or entering penetration testing and network security.
+---
 
-🧭 Table of Contents
-🔍 Scan Types Comparison
+## 🧭 Table of Contents
 
-🧪 Example Usage
+- [🔍 Scan Types Comparison](./nmap_scan_types.md)
+- [🧪 Example Usage](#example-usage)
+- [🛡️ Security+ Relevance](#security-relevance)
+- [🚀 Learning Roadmap](#learning-roadmap)
+- [👤 Author & Contact](#author--contact)
 
-🛡️ Security+ Relevance
+---
 
-🚀 Learning Roadmap
+## 🔍 Scan Types Comparison
 
-👤 Author & Contact
+📄 View full table in [`nmap_scan_types.md`](./nmap_scan_types.md)
 
-🔍 Scan Types Comparison
-📄 View full table in nmap_scan_types.md
+Side-by-side breakdown of `-sS`, `-sT`, and `-sU` scans, privileges, speed, and use cases.
 
-Side-by-side breakdown of -sS, -sT, and -sU scans with privileges, stealth, and usage context.
+---
 
-🧪 Example Usage
-TCP + UDP combo scan:
+## 🧪 Example Usage
 
-nginx
-Copy
-Edit
+Basic TCP and UDP combo scan:
+
+```bash
 sudo nmap -sS -sU -p T:22,80,U:53,161 192.168.0.103
-Aggressive scan with reasons:
+```
 
-css
-Copy
-Edit
-sudo nmap -A --reason 192.168.0.103
-Run vulnerability scripts:
+Other useful examples:
 
-nginx
-Copy
-Edit
-sudo nmap --script vuln 192.168.0.103
-🛡️ Security+ Relevance
-These scans align with the following Security+ SY0-701 exam domains:
+```bash
+nmap --script vuln 192.168.0.103
+nmap -A --reason 192.168.0.103
+```
 
-4.2: Vulnerability management
+---
 
-4.3: Monitoring and enumeration tools
+## 🛡️ Security+ Relevance
 
-5.5: Penetration testing activities
+These scans align with the following SY0-701 exam objectives:
 
-🚀 Learning Roadmap
-✅ Current:
-TCP/UDP scanning fundamentals
+- **4.2**: Vulnerability scanning
+- **4.3**: Monitoring tools and enumeration
+- **5.5**: Penetration testing and security assessments
 
-Aggressive scans with -A
+---
 
-Vulnerability scanning via NSE (--script vuln)
+## 🚀 Learning Roadmap
 
-📌 Coming Soon:
-Output formats (-oN, -oG, -oX)
+**✅ Current focus:**
 
-CIDR subnet scanning (192.168.1.0/24)
+- TCP/UDP scanning basics
+- Aggressive scans with `-A`
+- NSE scripting with `--script vuln`
 
-Scan evasion (--data-length, --decoy)
+**📌 Coming soon:**
 
-Automating Nmap with Python (python-nmap)
+- Output formats (`-oN`, `-oG`, `-oX`)
+- Scan evasion techniques
+- Subnet scanning (`/24`, `/16`)
+- Automating Nmap with Python (`python-nmap`)
 
-👤 Author & Contact
-Oleksandr Sheniak
-Cybersecurity Student | Penetration Testing Enthusiast
+---
 
-🔗 GitHub
-🔗 LinkedIn
+## 👤 Author & Contact
+
+**Oleksandr Sheniak**  
+Cybersecurity Student | Penetration Testing Enthusiast  
+🔗 [GitHub](https://github.com/sheniaks)  
+🔗 [LinkedIn](https://ca.linkedin.com/in/sheniaks)
+
+---
+
+> ☕️ If this helped you, please ⭐ star the repo and share it with other learners!
